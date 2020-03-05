@@ -19,9 +19,9 @@ module BlackBoxMulUInt8(
 endmodule
 
 module BlackBoxMulInt8(
-	                      input signed wire [7:0] I0,
-	                      input signed wire [7:0] I1,
-	                      output signed reg [7:0] O,
+	                      input wire signed [7:0] I0,
+	                      input wire signed [7:0] I1,
+	                      output reg signed [7:0] O,
 	                      input wire       clock
 	                      );
 `ifdef VERILATOR

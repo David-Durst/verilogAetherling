@@ -7,7 +7,7 @@ module BlackBoxMulUInt8(
 `ifdef VERILATOR
    reg [7:0] reg0;
    reg [7:0] reg1;
-   always @( posedge clk ) begin
+   always @( posedge clock ) begin
       reg0 <= I0 * I1;
       reg1 <= reg0;
       O <= reg1;

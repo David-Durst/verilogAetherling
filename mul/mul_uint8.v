@@ -3,7 +3,7 @@ module mul_uint8(
 	               input wire [7:0] I1,
 	               output reg [7:0] O,
 	               input wire       clk
-	               )
+	               );
 `ifdef VERILATOR
    reg [7:0] reg0;
    reg [7:0] reg1;

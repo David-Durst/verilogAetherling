@@ -2,7 +2,7 @@ module BlackBoxMulUInt8(
 	               input wire [7:0] I0,
 	               input wire [7:0] I1,
 	               output reg [7:0] O,
-	               input wire       clk
+	               input wire       clock
 	               );
 `ifdef VERILATOR
    reg [7:0] reg0;

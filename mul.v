@@ -16,7 +16,7 @@ module BlackBoxMulUInt8(
    assign O = reg2;
 `endif
 `ifndef VERILATOR
-   mul_tcl mul_uint8(
+   mul_uint8 mul_uint8 (
                    .A(I0),
                    .B(I1),
                    .P(O),
@@ -42,7 +42,7 @@ module BlackBoxMulInt8(
    assign O = reg2;
 `endif
 `ifndef VERILATOR
-   mul_tcl mul_int8(
+   mul_int8 mul_int8 (
                      .A(I0),
                      .B(I1),
                      .P(O),
@@ -69,7 +69,7 @@ module BlackBoxMulUInt16(
    assign O = reg2;
 `endif
 `ifndef VERILATOR
-   mul_tcl mul_uint16(
+   mul_uint16 mul_uint16 (
                    .A(I0),
                    .B(I1),
                    .P(O),
@@ -95,7 +95,7 @@ module BlackBoxMulInt16(
    assign O = reg2;
 `endif
 `ifndef VERILATOR
-   mul_tcl mul_int16(
+   mul_int16 mul_int16 (
                      .A(I0),
                      .B(I1),
                      .P(O),
@@ -128,7 +128,7 @@ module BlackBoxMulUInt32(
    assign O = reg5;
 `endif
 `ifndef VERILATOR
-   mul_tcl mul_uint32(
+   mul_uint32 mul_uint32 (
                    .A(I0),
                    .B(I1),
                    .P(O),
@@ -157,7 +157,7 @@ module BlackBoxMulInt32(
    assign O = reg5;
 `endif
 `ifndef VERILATOR
-   mul_tcl mul_int32(
+   mul_int32 mul_int32 (
                      .A(I0),
                      .B(I1),
                      .P(O),

@@ -37,4 +37,4 @@ set_property -dict [list CONFIG.PortAWidth "$bitWidth" CONFIG.PortBWidth "$bitWi
 
 generate_target {all} [get_ips]
 
-# synth_ip [get_ips]
+synth_ip [get_ips]

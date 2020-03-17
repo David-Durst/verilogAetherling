@@ -4,6 +4,8 @@ if { [file isdirectory "$IP"] } {
     # read the ip definition (.xci)
     read_ip [glob "$IP/*/*.xci"]
 } else {
+    file mkdir $IP
+    create_project -in_memory 
 
     # Spatial IPs
 
@@ -34,11 +36,6 @@ if { [file isdirectory "$IP"] } {
 #    set_property generate_synth_checkpoint false [get_files mul_39_39_39_6_Unsigned_Use_Mults.xci]
 #    generate_target {all} [get_ips mul_39_39_39_6_Unsigned_Use_Mults]
 
-
-
-
-    file mkdir $IP
-    create_project -in_memory 
 
     set moduleName mul_uint8
     set bitWidth 8

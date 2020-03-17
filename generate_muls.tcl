@@ -30,6 +30,9 @@ if { [file isdirectory "$IP"] } {
     
     
     ## Integer Multiplier
+    create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name mul_32_32_32_6_Unsigned_Use_Mults -dir $IP
+    set_property -dict [list CONFIG.MultType {Parallel_Multiplier} CONFIG.PortAType {Unsigned}  CONFIG.PortAWidth {32} CONFIG.PortBType {Unsigned} CONFIG.PortBWidth {32} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OptGoal {Speed} CONFIG.Use_Custom_Output_Width {true} CONFIG.OutputWidthHigh {32} CONFIG.PipeStages {6} CONFIG.ClockEnable {true}] [get_ips mul_32_32_32_6_Unsigned_Use_Mults]
+
     create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name mul_39_39_39_6_Unsigned_Use_Mults -dir $IP
     set_property -dict [list CONFIG.MultType {Parallel_Multiplier} CONFIG.PortAType {Unsigned}  CONFIG.PortAWidth {39} CONFIG.PortBType {Unsigned} CONFIG.PortBWidth {39} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OptGoal {Speed} CONFIG.Use_Custom_Output_Width {true} CONFIG.OutputWidthHigh {39} CONFIG.PipeStages {6} CONFIG.ClockEnable {true}] [get_ips mul_39_39_39_6_Unsigned_Use_Mults]
 #    set_property -dict [list CONFIG.clk_intf.FREQ_HZ $CLOCK_FREQ_HZ] [get_ips mul_39_39_39_6_Unsigned_Use_Mults]
